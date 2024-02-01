@@ -1,0 +1,8 @@
+function generateRandomBytes512() {
+  const byteArray = new Uint8Array(512); // Create a byte array of size 512
+  crypto.getRandomValues(byteArray); // Fill it with random bytes using the Crypto API
+  return byteArray;
+}
+
+const randomBytes = generateRandomBytes512();
+console.log(randomBytes); // Output: Uint8Array(512) [125, 235, 182, ... ]
